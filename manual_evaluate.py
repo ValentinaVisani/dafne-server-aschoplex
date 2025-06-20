@@ -22,6 +22,8 @@ import re
 import time
 
 from dafne_dl.DynamicDLModel import DynamicDLModel
+from dafne_dl.DynamicTorchModel import DynamicTorchModel
+from dafne_dl.DynamicEnsembleModel import DynamicEnsembleModel
 from utils import evaluate_model
 import argparse
 
@@ -54,7 +56,8 @@ print('Model type or dir:', model_type_or_dir)
 
 def run_evaluation():
     print('Loading model...')
-    model = DynamicDLModel.Load(open(model_path, 'rb'))
+    model = DynamicEnsembleModel.Load(open(model_path, 'rb'))
+    # model = DynamicDLModel.Load(open(model_path, 'rb'))
 
     print('Evaluating model...')
     t = time.time()
