@@ -26,8 +26,8 @@ from dafne_dl.DynamicEnsembleModel import DynamicEnsembleModel
 from dafne_dl.misc import calc_dice_score, calc_dice_score_3D
 
 
-MODELS_DIR = "/home/valentina/Desktop/Projects/ASCHOPLEX_DAFNE/dafne-server-aschoplex/db/models"
-TEST_DATA_DIR = "/home/valentina/Desktop/Projects/ASCHOPLEX_DAFNE/dafne-server-aschoplex/db/test_data"
+MODELS_DIR = "db/models"
+TEST_DATA_DIR = "db/test_data"
 
 config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'db', 'server_config.json')
 
@@ -367,7 +367,7 @@ if __name__ == '__main__':
     # model = DynamicDLModel.Load(open(f"{MODELS_DIR}/Thigh/1610001000.model", 'rb'))
     # r = evaluate_model("Thigh", model)
 
-    MODELS_DIR = "/home/valentina/Desktop/Projects/ASCHOPLEX_DAFNE/TESTING_INCREMENTAL_LEARNING_DAFNE/MODEL"
+    MODELS_DIR = "db/models"
     TEST_DATA_DIR = "db/test_data"
 
     # model = DynamicEnsembleModel.Load(open(f"{MODELS_DIR}/CHP/1610001000.model", 'rb'))
